@@ -13,6 +13,8 @@ from wagtail.log_actions import LogFormatter
 from wagtail.models import ModelLogEntry, Page, PageLogEntry, PageViewRestriction
 from wagtail.rich_text.pages import PageLinkHandler
 
+from .admin import wagtail_hooks  # noqa
+
 
 def require_wagtail_login(next):
     login_url = getattr(settings, 'WAGTAIL_FRONTEND_LOGIN_URL', reverse('wagtailcore_login'))
